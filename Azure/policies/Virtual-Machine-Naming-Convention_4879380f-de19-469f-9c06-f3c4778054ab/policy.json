@@ -1,0 +1,45 @@
+{
+ "properties": {
+  "displayName": "Virtual-Machine-Naming-Convention",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "metadata": {
+   "category": "NamingConvention",
+   "createdBy": "f0d58fc2-ad73-4fb5-b7f7-01ce2f9c7b5e",
+   "createdOn": "2022-08-17T12:56:46.7739078Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "namePattern": {
+    "type": "String",
+    "metadata": {
+     "displayName": "namePattern",
+     "description": "? for letter, # for numbers"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "not": {
+       "field": "name",
+       "match": "[parameters('namePattern')]"
+      }
+     },
+     {
+      "field": "type",
+      "equals": "Microsoft.Compute/virtualMachines"
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/30c7c1ef-3a96-4f1b-8b75-ec766486dfcb/providers/Microsoft.Authorization/policyDefinitions/4879380f-de19-469f-9c06-f3c4778054ab",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "4879380f-de19-469f-9c06-f3c4778054ab"
+}
