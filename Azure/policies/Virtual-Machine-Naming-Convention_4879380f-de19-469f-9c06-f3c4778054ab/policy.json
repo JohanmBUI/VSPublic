@@ -39,7 +39,7 @@
    }
   }
  },
- "id": "/subscriptions/30c7c1ef-3a96-4f1b-8b75-ec766486dfcb/providers/Microsoft.Authorization/policyDefinitions/4879380f-de19-469f-9c06-f3c4778054ab",
+ "id": "",
  "type": "Microsoft.Authorization/policyDefinitions",
- "name": "4879380f-de19-469f-9c06-f3c4778054ab"
+ "name": ""
 }
